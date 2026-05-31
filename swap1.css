@@ -1,0 +1,251 @@
+/* ─── Choose this Structural Custom Theme to display a unique webpage ─── */
+:root {
+    --surface-dark:   #1a100f; /* Used a natural color to displace the deep roasted products */
+    --surface-light:  #fdfbf7;
+    --accent-clay:    #bd6a42;
+    --ink-main:       #382b26;
+    --ink-muted:      #7a6b65;
+    --card-border:    #eadecf;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--surface-light);
+    color: var(--ink-main);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ─── Navigation Layout (Flexbox) ───From week 1 - 4*/
+.balal-top-banner {
+    background-color: var(--surface-dark);
+    color: #ffffff;
+    padding: 25px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid var(--accent-clay);
+}
+.brand-logo-icon {
+    width: 24px;         /* fitting image size next to h1 */
+    height: 24px;
+    object-fit: contain;
+    display: block;
+}
+
+.balal-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.balal-glyph {
+    font-size: 1.6rem;
+}
+
+.balal-top-banner h1 {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.balal-nav-list {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.balal-nav-list li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: color 0.25s ease;
+}
+
+.balal-nav-list li a:hover {
+    color: var(--accent-clay);
+}
+
+/* ─── Inner Content Shell ─── From week 1 - 4*/
+.balal-core-content {
+    flex: 1;
+    padding: 50px 30px;
+    max-width: 1140px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.showcase-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.showcase-header h2 {
+    font-size: 2rem;
+    color: var(--surface-dark);
+    margin-bottom: 8px;
+}
+
+.showcase-header p {
+    color: var(--ink-muted);
+    font-size: 0.95rem;
+}
+
+/* ─── Grid Configuration Matrix (CSS Grid) ─── From week 1 - 4*/
+.menu-matrix-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.artisan-card {
+    background-color: #ffffff;
+    border: 2px solid var(--card-border);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.artisan-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-clay);
+}
+
+/* used a circular image container badge to create a more visually appealing appearance. */
+.graphic-badge-box {
+    width: 75px;
+    height: 75px;
+    background-color: #f5ede4;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed var(--accent-clay);
+    overflow: hidden;
+}
+
+
+.graphic-badge-box img.product-icon {
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+    display: block;
+}
+
+.item-title-label {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--surface-dark);
+    margin-bottom: 6px;
+}
+
+.item-price-tag {
+    font-weight: 700;
+    color: var(--accent-clay);
+    font-size: 1.1rem;
+    display: block;
+}
+
+/* ─── Form & Submission Styling ─── From week 1 - 4*/
+.inscription-module {
+    background-color: var(--surface-dark);
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto;
+    border: 1px solid rgba(189, 106, 66, 0.3);
+}
+
+.inscription-module h3 {
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.inscription-module p {
+    font-size: 0.9rem;
+    color: #c4b9b7;
+    margin-bottom: 25px;
+}
+
+.interaction-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.interaction-row input[type="text"] {
+    padding: 12px 18px;
+    border: 2px solid #3d2b29;
+    background-color: #241715;
+    color: #ffffff;
+    border-radius: 6px;
+    width: 300px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.interaction-row input[type="text"]:focus {
+    border-color: var(--accent-clay);
+}
+
+.interaction-row button {
+    padding: 12px 24px;
+    background-color: var(--accent-clay);
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: background 0.2s ease;
+}
+
+.interaction-row button:hover {
+    background-color: #a4562f;
+}
+
+/* ───  Use a similar color for the header to match the footer. ─── */
+.balal-base-footer {
+    background-color: var(--surface-dark);
+    color: #9c8e8c;
+    padding: 25px;
+    text-align: center;
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+    border-top: 1px solid #2d1d1b;
+}
+
+/* Media Breakpoint - Week 1 - 4*/
+@media (max-width: 680px) {
+    .balal-top-banner {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+    }
+    .interaction-row {
+        flex-direction: column;
+        width: 100%;
+    }
+    .interaction-row input[type="text"] {
+        width: 100%;
+    }
+}
